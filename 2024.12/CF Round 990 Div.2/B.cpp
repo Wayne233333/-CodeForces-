@@ -9,13 +9,17 @@ int main(){
     int word[26];
     int j;
     int Max, Min;
+    char ch[10];
+    int len_ch;
     scanf("%d",&t);
     for(int i = 1; i<= t; i++){
         scanf("%d",&n);
         memset(word, 0, sizeof(word));
         getchar();
         c = getchar();
+        len_ch = 0;
         while(c >= 'a' && c <= 'z'){
+            ch[len_ch++] = c;
             word[int(c)-97]++;
             c = getchar();
         }
@@ -29,12 +33,14 @@ int main(){
                 if(word[k] < word[Min]) Min = k;
             }
         }
-        word[Min]--;
-        word[Max]++;
-        for(int k = 0; k<26;k++){
-            for(int l =1; l<=word[k];l++){
-                printf("%c", char(k+97));
+        for(int k = 0; k<n;k++){
+            if(ch[k] == char(Min+97)){
+                ch[k] = char(Max+97);
+                break;
             }
+        }
+        for(int k = 0; k<n;k++){
+            printf("%c",ch[k]);
         }
         printf("\n");
     }
