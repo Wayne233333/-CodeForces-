@@ -13,7 +13,7 @@ int main(){ //思路错误
 
         b[0]=1;
         b[1]=a[n];
-        c[0]=0
+        c[0]=0;
         for(int j = n-1; j>=1;j--){
             if(a[j] <= b[b[0]]){
                 b[++b[0]] = a[j];
@@ -27,7 +27,7 @@ int main(){ //思路错误
         for(int j = b[0]; j>=1; j--){
             printf("%d ", b[j]);
         }
-        for(int j )
+        
 
     }
     return 0;
