@@ -42,3 +42,27 @@ int main(){
 }
 
 
+
+//待修改:b的定义
+// #include<bits/stdc++.h>
+// using namespace std;
+// unordered_set<vector<vector<bool>>> kn;
+// vector<vector<bool>> b(302,vector<bool>(302,false));
+
+// int main(){
+//     int n,c1,c2;
+//     scanf("%d",&n);
+//     for(int i=0;i<n;i++){
+//         scanf("%d %d",&c1,&c2);
+//         for(int j=c1;j<=c2;j++){
+//             b[i][j]=true;
+//         }
+//     }
+//     for(int i=0; i<=300; i++){
+//         if(!kn.count(b[i])){
+//             kn.insert(b[i]);
+//         }
+//     }
+//     printf("%d",kn.size());
+//     return 0;
+// }
